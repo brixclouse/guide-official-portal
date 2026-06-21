@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竞彩信息导航 · 日常参考与延伸</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f6f0;
+            font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans', 'Helvetica Neue', sans-serif;
+            color: #2b2b2b;
+            line-height: 1.6;
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        /* 文章式顶端装饰 */
+        .hero-tag {
+            border-left: 4px solid #b7a482;
+            background: #f1ede6;
+            padding: 1.2rem 1.5rem;
+            margin: 1.8rem 0 2rem;
+            font-size: 0.92rem;
+            color: #4d3f2e;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .hero-tag strong {
+            font-weight: 600;
+            color: #1f3a2b;
+        }
+
+        h1 {
+            font-weight: 380;
+            font-size: 1.9rem;
+            letter-spacing: 0.02em;
+            color: #2c3e2b;
+            margin-top: 0.4rem;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+        }
+
+        .byline {
+            font-size: 0.85rem;
+            color: #77715a;
+            margin-bottom: 1.6rem;
+            border-bottom: 1px dashed #d6cdbc;
+            padding-bottom: 0.6rem;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 1.3rem;
+            color: #3f4d38;
+            margin: 2rem 0 0.8rem;
+            padding-bottom: 0.2rem;
+            border-bottom: 1px solid #d8d0be;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .insight-block {
+            background: #f4f0e8;
+            padding: 1.3rem 1.5rem;
+            border-radius: 12px;
+            margin: 1.8rem 0;
+            border: 1px solid #e4dbcc;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .insight-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .insight-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            background: #d1c3ae;
+            color: #2f2a1f;
+            padding: 0.1rem 0.8rem;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+        }
+
+        .faq-item {
+            margin: 1.2rem 0;
+            padding-left: 0.8rem;
+            border-left: 2px solid #c9bcab;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            color: #3f4a2f;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-item p {
+            margin-bottom: 0.2rem;
+        }
+
+        .note-box {
+            background: #ede8dd;
+            padding: 1rem 1.4rem;
+            border-radius: 10px;
+            margin: 1.8rem 0;
+            color: #3a352c;
+            font-size: 0.95rem;
+        }
+
+        .note-box i {
+            font-style: normal;
+            background: #dacfc0;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        a {
+            color: #4b6b3e;
+            text-decoration: none;
+            border-bottom: 1px solid #b7c6a8;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #2d4723;
+            border-bottom-color: #2d4723;
+        }
+
+        .nav-link-sentence {
+            background: #f0ebdf;
+            padding: 0.9rem 1.4rem;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 0.8rem 0 0.2rem;
+            font-style: normal;
+        }
+
+        .footer-divider {
+            margin: 3rem 0 1.5rem;
+            border-top: 1px solid #ddd3c2;
+            padding-top: 1.2rem;
+            font-size: 0.8rem;
+            color: #7d735f;
+            text-align: center;
+        }
+
+        /* 响应式处理 */
+        @media (max-width: 540px) {
+            body {
+                padding: 1rem 0.8rem 2.5rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .hero-tag {
+                padding: 1rem 1.2rem;
+                font-size: 0.85rem;
+            }
+            .insight-block {
+                padding: 1rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 头部标识线 -->
+    <div class="hero-tag">
+        <strong>竞彩信息参考</strong> · 日常查询、对照阅读与延伸
+    </div>
+
+    <h1>查询与对照之间<br>一份竞彩导航的日常笔记</h1>
+    <div class="byline">从信息整理到审慎参考&nbsp;&nbsp;·&nbsp;&nbsp;持续更新</div>
+
+    <p>
+        对于经常需要查阅竞彩场次、赔率变动或赛事数据的爱好者来说，一个结构清晰、信息稳定的入口就是每天打开浏览器时的第一站。
+        与其在搜索结果里反复筛选，不如直接以 <a href="https://official-portal-jingcai.com">中国竞彩网首页</a> 作为起点，
+        那里聚合了最基础的竞彩对阵、开奖公告、玩法说明以及变动提示。把首页固定为书签，能省去不少临时查找的精力。
+    </p>
+
+    <p>
+        从个人使用习惯来看，我倾向于在下午或晚间赛事密集前打开页面，先快速扫一遍当日场次编号、让球数和赔率区间，
+        然后结合自己关注的联赛或球队做简单记录。这种“对照式浏览”并不复杂——左侧是官方列表，右侧是自己做的Excel或手写笔记，
+        两相对照，往往能发现一些数据层面的细微变化，比如某场赔率在几小时内出现两次调整，或者让球数在赛前突然回调。
+        这些细节并不总能改变决策，但至少让查询变得更有指向性。
+    </p>
+
+    <!-- 亮点摘要卡片 -->
+    <div class="insight-block">
+        <div class="insight-label">亮点 · 日常使用</div>
+        <p>
+            <strong>结构清晰，更新稳定</strong> —— 页面以日期和联赛为维度排列，开奖结果与场次对照一目了然。
+            对于习惯做表格记录的人来说，能够直接复制关键编号和赔率数据，无需二次整理。
+        </p>
+        <p>
+            <strong>信息密度适中</strong> —— 不像某些资讯站那样堆满弹窗和广告，首页聚焦于竞彩对阵与结果，
+            加载速度较快，在移动端也有可读的排版，适合在地铁或午休时快速确认。
+        </p>
+    </div>
+
+    <h2>使用建议 · 从查看到延伸</h2>
+    <p>
+        如果你是刚开始系统性地查询竞彩数据，不妨试试这个流程：先通过 <a href="https://official-portal-jingcai.com">中国竞彩网首页</a> 了解当日全部场次及固定奖金，
+        然后针对自己感兴趣的2-3场比赛，去对比历史交锋记录或近期状态——这部分信息通常需要借助外部数据站或球队官网。
+        首页本身并不提供深度分析或预测，但它是所有延伸阅读的“坐标原点”。把官方数据当作锚点，再去阅读论坛观点或战术文章，
+        就不容易被片面信息带偏。
+    </p>
+    <p>
+        另一个容易被忽略的用途是“回顾对照”：赛事结束后隔天查看首页公布的开奖结果，与自己之前的记录做比对，
+        能帮助自己更客观地评估判断误差。长期积累下来，这些小对照比任何分析文章都有说服力。
+    </p>
+
+    <h2>FAQ 摘要 · 常见疑问</h2>
+    <div class="faq-item">
+        <strong>首页上的赔率多久更新一次？</strong>
+        <p>通常随比赛进程和投注量变化，场次列表会实时或准实时调整。建议在赛前1-2小时做最终确认，因为临近开场时数据可能趋于稳定。</p>
+    </div>
+    <div class="faq-item">
+        <strong>能否直接看到历史赔率走势？</strong>
+        <p>首页主要提供当日（或当期）数据，不包含历史走势图。如果需要趋势分析，可以结合第三方数据平台，或自行手动记录。</p>
+    </div>
+    <div class="faq-item">
+        <strong>移动端浏览体验如何？</strong>
+        <p>页面针对手机做了响应式适配，表格可横向滑动，主要功能模块在窄屏上也能正常使用。不过部分详细玩法说明页可能需要缩放查看。</p>
+    </div>
+
+    <!-- 提示性引用块 -->
+    <div class="note-box">
+        <i>⏳ 提示</i> &nbsp; 竞彩信息以官方发布为准，任何第三方解读都只能作为延伸参考。
+        养成从 <a href="https://official-portal-jingcai.com" style="border-bottom:1px solid #9baa8b;">中国竞彩网首页</a> 出发的习惯，
+        能让你的查询路径更简洁，也更容易保持信息源的一致。
+    </div>
+
+    <p style="margin-top: 0.8rem;">
+        说到底，查询是日课，对照是方法，而延伸阅读则是兴趣的自然延伸。
+        这个页面只是一份索引和几点经验，如果你也习惯用官方首页作为每日的起点，
+        不妨把它放在浏览器最顺手的位置。时间久了，它就是你竞彩信息流里那个沉默但可靠的基准点。
+    </p>
+
+    <div class="footer-divider">
+        <span>参考入口 · 信息导航</span><br>
+        <span style="font-size:0.75rem; color:#928a78;">内容仅为使用场景描述，不构成任何建议</span>
+    </div>
+</div>
+</body>
+</html>
