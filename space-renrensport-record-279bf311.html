@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人人体育 - 再次相遇，持续陪伴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #2c2c2c;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* --- Hero 区 --- */
+        .hero {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            border: 1px solid #e8e8e8;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 550;
+            letter-spacing: 1px;
+            color: #1f1f1f;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #6f6f6f;
+            max-width: 600px;
+            margin: 0 auto 1.4rem;
+            line-height: 1.8;
+        }
+
+        .hero .tagline {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 0.4rem 1.6rem;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            color: #3a3a3a;
+            border: 1px solid #ddd;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- 通用卡片 --- */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 1.8rem;
+            border: 1px solid #e4e4e4;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.15s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 520;
+            margin-bottom: 0.9rem;
+            color: #232323;
+            border-left: 4px solid #b0b0b0;
+            padding-left: 0.9rem;
+        }
+
+        .card p {
+            color: #4f4f4f;
+            font-size: 0.95rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            font-size: 0.95rem;
+            color: #4a4a4a;
+            padding: 0.3rem 0 0.3rem 1.3rem;
+            position: relative;
+        }
+
+        .card li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+
+        /* --- 说明区 (宽卡) --- */
+        .full-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 2rem;
+            border: 1px solid #e4e4e4;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .full-card h2 {
+            font-weight: 530;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            color: #222;
+        }
+
+        .full-card p {
+            color: #4a4a4a;
+            margin-bottom: 1rem;
+        }
+
+        .inline-link {
+            color: #2d2d2d;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #bbb;
+            font-weight: 500;
+            transition: color 0.2s, text-decoration-color 0.2s;
+        }
+
+        .inline-link:hover {
+            color: #000;
+            text-decoration-color: #555;
+        }
+
+        /* --- FAQ 摘要 --- */
+        .faq-summary {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 2rem;
+            border: 1px solid #e4e4e4;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .faq-summary h2 {
+            font-weight: 530;
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            color: #222;
+        }
+
+        .faq-item {
+            padding: 0.9rem 0;
+            border-bottom: 1px solid #ececec;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 510;
+            font-size: 1rem;
+            color: #2e2e2e;
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-a {
+            font-size: 0.9rem;
+            color: #676767;
+            line-height: 1.6;
+        }
+
+        /* --- 底部 --- */
+        .footer {
+            text-align: center;
+            padding: 1.8rem 0 0.8rem;
+            border-top: 1px solid #ddd;
+            color: #7a7a7a;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+        }
+
+        .footer a {
+            color: #4a4a4a;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-color: #ccc;
+        }
+
+        .footer a:hover {
+            color: #111;
+        }
+
+        /* --- 响应式 --- */
+        @media (max-width: 700px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .sub {
+                font-size: 1rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 1.4rem;
+            }
+
+            .card {
+                padding: 1.6rem 1.4rem;
+            }
+
+            .full-card,
+            .faq-summary {
+                padding: 1.6rem 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Hero 区 -->
+    <div class="hero">
+        <h1>再次回到这里</h1>
+        <p class="sub">
+            有些地方值得你收藏，偶尔回来看一看。<br>
+            运动与生活的节奏，在这里沉淀为熟悉的日常。
+        </p>
+        <span class="tagline">⏺ 已收藏 · 常回来</span>
+    </div>
+
+    <!-- 优势区 (两卡) -->
+    <div class="card-grid">
+        <div class="card">
+            <h3>为什么一再回来</h3>
+            <p>信息不会淹没在时间线里，你关注的赛事、活动、内容都保留在原来的位置。随时可以继续上一次的浏览，不必重新寻找。</p>
+            <ul>
+                <li>稳定的内容沉淀</li>
+                <li>一致的浏览体验</li>
+                <li>没有嘈杂推送</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>收藏即连接</h3>
+            <p>将 <a href="https://space-renrensport.com" class="inline-link">人人体育</a> 加入书签，等于为自己保留一个安静的体育内容入口。不必担心迷路，它始终在那里。</p>
+            <ul>
+                <li>一键收藏，长久有效</li>
+                <li>页面结构清晰，不花哨</li>
+                <li>适合反复浏览</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 说明区：持续关注的价值 -->
+    <div class="full-card">
+        <h2>持续关注的节奏</h2>
+        <p>
+            运动世界从来不缺新鲜事，但真正值得你投入注意力的内容，往往需要时间检验。<strong>人人体育</strong> 更倾向于用一种平实的方式呈现：没有浮夸的标题，没有紧迫的倒计时，只有经过整理的信息，等待你在方便的时候阅读。
+        </p>
+        <p>
+            很多朋友会把这里放在浏览器的常驻标签页里，偶尔点开，看看有没有值得留意的更新。这种「不打扰、但一直在」的默契，正是我们持续维护的动力。
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.95rem; color: #5c5c5c;">
+            <span style="background: #f0f0f0; padding: 0.2rem 0.6rem; border-radius: 20px; border: 1px solid #ddd;">📌 建议收藏此页，方便下次回来</span>
+        </p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+        <h2>你可能想了解的</h2>
+        <div class="faq-item">
+            <div class="faq-q">这里的内容多久更新一次？</div>
+            <div class="faq-a">没有固定频率，但会保持持续更新。重要的赛事、活动或内容变化都会及时反映，适合不定期回看。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">需要注册或登录才能使用吗？</div>
+            <div class="faq-a">不需要。直接浏览即可，没有任何强制注册环节。如果你愿意，可以收藏页面以便再次访问。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">我在其他设备上能访问同样的内容吗？</div>
+            <div class="faq-a">可以。只要使用相同的书签或直接输入网址，在任何设备上都能看到一致的页面。</div>
+        </div>
+    </div>
+
+    <!-- 底部链接（自然嵌入句子） -->
+    <div class="footer">
+        <p>
+            如果你还没有收藏，现在就可以将 <a href="https://space-renrensport.com">人人体育</a> 加入书签。<br>
+            下次再来时，一切如常。
+        </p>
+        <p style="margin-top: 0.8rem; color: #999;">&copy; 保留所有权利 · 安静陪伴</p>
+    </div>
+
+</div>
+</body>
+</html>
